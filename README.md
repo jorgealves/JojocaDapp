@@ -1,2 +1,0 @@
-# JojocaDapp
-Jojoca's Dapp
