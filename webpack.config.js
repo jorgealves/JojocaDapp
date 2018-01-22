@@ -10,21 +10,21 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.s[ac]ss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
+            // {
+            //     test: /\.s[ac]ss$/,
+            //     use: ExtractTextPlugin.extract({
+            //         fallback: 'style-loader',
+            //         use: ['css-loader', 'sass-loader']
+            //     })
+            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
             }
         ],
-    },
-    plugins: [
-        new ExtractTextPlugin('css/styles.css')
-    ]
+    }
+    // plugins: [
+    //     new ExtractTextPlugin('css/styles.css')
+    // ]
 };
