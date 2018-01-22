@@ -3,7 +3,7 @@ import 'bootstrap-sass';
 import "../sass/styles.scss";
 import Web3 from "web3";
 
-let web3 = new Web3(new Web3.providers.HttpProvider("http://ganache:8545"));
+let web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/"));
 
 let contractFactoryAddress = "0xb7a9155cf937d4bf761b422047221fae12d1d5c5";
 
