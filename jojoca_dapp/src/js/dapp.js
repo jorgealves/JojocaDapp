@@ -101,8 +101,6 @@ let contractFactoryABI = [
 
 let ContractFactory = new web3.eth.contract(contractFactoryABI);
 
-
-
 $(document).ready(() => {
     $('.js-contract-factory-abi').text(JSON.stringify(ContractFactory.abi));
 });
