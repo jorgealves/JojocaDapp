@@ -58,6 +58,6 @@ typings/
 .env
 
 # Pycharm data
-.ideia/
+.idea/
 
-__pycache__/
+__pycache__
