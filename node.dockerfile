@@ -8,6 +8,6 @@ WORKDIR /app
 
 VOLUME [ "/app" ]
 
-RUN npm install -g
+RUN npm install
 
 CMD [ "bash" ]
