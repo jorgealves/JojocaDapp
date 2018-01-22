@@ -22583,7 +22583,7 @@ if (typeof jQuery === 'undefined') {
 /* 32 */
 /***/ (function(module, exports) {
 
-
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/home/jorgeandrealves/Documents/github/JojocaDapp/jojoca_dapp/src/sass/styles.scss'");
 
 /***/ }),
 /* 33 */
