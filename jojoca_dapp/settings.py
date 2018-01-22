@@ -24,7 +24,7 @@ SECRET_KEY = '-urbpebh@q()3-0l8%maj9e%h@dwj78kx)_-rh=bw42_hbf2^y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jojoca-dapp.herokuapp.com', 'localhost','54.225.111.83']
 
 # Application definition
 
@@ -114,5 +114,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'static'
 
 NETWORK_URL = 'http://localhost:8545'

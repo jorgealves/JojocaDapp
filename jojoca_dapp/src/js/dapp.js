@@ -3,25 +3,11 @@ import 'bootstrap-sass';
 import "../sass/styles.scss";
 import Web3 from "web3";
 
-let web3 = new Web3(new Web3.providers.HttpProvider("http://ganache:8545"));
+let web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/"));
 
-let contractFactoryAddress = "0x1e394db5dac756e0514d6f9f8a52f7cf66d74ae9";
+let contractFactoryAddress = "0xb7a9155cf937d4bf761b422047221fae12d1d5c5";
 
 let contractFactoryABI = [
-    {
-        "constant": false,
-        "inputs": [],
-        "name": "createContract",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": true,
-        "stateMutability": "payable",
-        "type": "function"
-    },
     {
         "constant": true,
         "inputs": [
@@ -35,6 +21,25 @@ let contractFactoryABI = [
             {
                 "name": "",
                 "type": "string"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "getContractAddress",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
             }
         ],
         "payable": false,
@@ -62,6 +67,20 @@ let contractFactoryABI = [
     },
     {
         "constant": false,
+        "inputs": [],
+        "name": "createContract",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
         "inputs": [
             {
                 "name": "value",
@@ -77,31 +96,10 @@ let contractFactoryABI = [
         "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [
-            {
-                "name": "id",
-                "type": "uint256"
-            }
-        ],
-        "name": "getContractAddress",
-        "outputs": [
-            {
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
     }
 ];
 
 let ContractFactory = new web3.eth.contract(contractFactoryABI);
-
-
 
 $(document).ready(() => {
     $('.js-contract-factory-abi').text(JSON.stringify(ContractFactory.abi));

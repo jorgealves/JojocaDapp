@@ -9746,22 +9746,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-let web3 = new __WEBPACK_IMPORTED_MODULE_3_web3___default.a(new __WEBPACK_IMPORTED_MODULE_3_web3___default.a.providers.HttpProvider("http://ganache:8545"));
+let web3 = new __WEBPACK_IMPORTED_MODULE_3_web3___default.a(new __WEBPACK_IMPORTED_MODULE_3_web3___default.a.providers.HttpProvider("https://ropsten.infura.io/"));
 
-let contractFactoryAddress = "0x1e394db5dac756e0514d6f9f8a52f7cf66d74ae9";
+let contractFactoryAddress = "0xb7a9155cf937d4bf761b422047221fae12d1d5c5";
 
 let contractFactoryABI = [{
-    "constant": false,
-    "inputs": [],
-    "name": "createContract",
-    "outputs": [{
-        "name": "",
-        "type": "uint256"
-    }],
-    "payable": true,
-    "stateMutability": "payable",
-    "type": "function"
-}, {
     "constant": true,
     "inputs": [{
         "name": "",
@@ -9771,6 +9760,20 @@ let contractFactoryABI = [{
     "outputs": [{
         "name": "",
         "type": "string"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "id",
+        "type": "uint256"
+    }],
+    "name": "getContractAddress",
+    "outputs": [{
+        "name": "",
+        "type": "address"
     }],
     "payable": false,
     "stateMutability": "view",
@@ -9791,6 +9794,17 @@ let contractFactoryABI = [{
     "type": "function"
 }, {
     "constant": false,
+    "inputs": [],
+    "name": "createContract",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+}, {
+    "constant": false,
     "inputs": [{
         "name": "value",
         "type": "string"
@@ -9802,20 +9816,6 @@ let contractFactoryABI = [{
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
-}, {
-    "constant": true,
-    "inputs": [{
-        "name": "id",
-        "type": "uint256"
-    }],
-    "name": "getContractAddress",
-    "outputs": [{
-        "name": "",
-        "type": "address"
-    }],
-    "payable": false,
-    "stateMutability": "view",
     "type": "function"
 }];
 
@@ -22583,7 +22583,7 @@ if (typeof jQuery === 'undefined') {
 /* 32 */
 /***/ (function(module, exports) {
 
-
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/app/jojoca_dapp/src/sass/styles.scss'");
 
 /***/ }),
 /* 33 */
