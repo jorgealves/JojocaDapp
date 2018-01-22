@@ -1,1 +1,1 @@
-web: python manage.py runserver jojoca-dapp.herokuapp.com:80
+web: python manage.py runserver 54.225.111.83:80
