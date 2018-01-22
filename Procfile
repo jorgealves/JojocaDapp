@@ -1,1 +1,1 @@
-web: gunicorn jojoca_dapp.wsgi --log-file -
+web: python manage.py runserver
