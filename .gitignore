@@ -60,5 +60,11 @@ typings/
 # Pycharm data
 .ideia/
 
-#Python compiled files
+# Python compiled files
 *.pyc
+
+# sourcemaps
+*.map
+
+# mac-related
+.DS_Store

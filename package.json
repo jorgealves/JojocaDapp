@@ -4,8 +4,15 @@
   "description": "Jojoca's Dapp",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "watch": "npm run build -- --watch"
+    "start": "npm run run-testrpc & npm run run-votings",
+    "run-testrpc": "node_modules/.bin/testrpc",
+    "build-votings": "webpack --config votings/webpack.config.js",
+    "watch": "npm run build-votings -- --watch",
+    "run-votings": "npm run migrate-truffle && webpack-dev-server --config votings/webpack.config.js --open",
+    "truffle": "truffle",
+    "compile-truffle": "truffle compile",
+    "migrate-truffle": "truffle migrate --reset",
+    "test-truffle": "truffle test"
   },
   "repository": {
     "type": "git",
@@ -20,22 +27,26 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.9",
+    "d3": "^4.12.2",
+    "ethereumjs-testrpc": "^6.0.3",
     "extract-text-webpack-plugin": "^3.0.2",
     "ganache-cli": "^6.0.3",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.4.0",
-    "gulp-sass": "^3.1.0",
-    "node-sass": "^4.7.2",
+    "json-loader": "^0.5.7",
+    "material-ui": "^1.0.0-beta.29",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-loadable": "^5.3.1",
     "sass-loader": "^6.0.6",
+    "solc": "^0.4.19",
     "style-loader": "^0.19.1",
     "truffle": "^4.0.5",
+    "truffle-solidity-loader": "0.0.8",
+    "web3": "^1.0.0-beta.26",
     "webpack": "^3.10.0",
-    "webpack-stream": "^4.0.0"
-  },
-  "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.3.0",
-    "web3": "^0.20.4"
+    "webpack-dev-server": "^2.11.0"
   }
 }
