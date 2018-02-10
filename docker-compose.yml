@@ -3,23 +3,21 @@ services:
   web:
     build:
       context: .
-      dockerfile: python.dockerfile
-    command: python3 manage.py runserver 0.0.0.0:8000  
-    ports: 
-      - 8000:8000
+      dockerfile: node.dockerfile
+    command: npm run nodemon
     volumes:
-      - .:/project
-  node:
+      - .:/app
+    ports:
+      - "3000:3000"
+
+  webpack:
     build:
       context: .
       dockerfile: node.dockerfile
     command: npm run watch
-    volumes:
-      - .:/app
-    
+
   ganache:
     image: trufflesuite/ganache-cli
     command: ganache-cli -m "Jojoca doesn't fail" -e 0
     ports:
       - 8545:8545
-    

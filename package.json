@@ -2,10 +2,13 @@
   "name": "jojocadapp",
   "version": "1.0.0",
   "description": "Jojoca's Dapp",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "echo 'run dev' & npm start",
     "build": "webpack",
-    "watch": "npm run build -- --watch"
+    "watch": "npm run build -- --watch",
+    "nodemon": "./node_modules/nodemon/bin/nodemon.js --exec npm run dev --config nodemon.json"
   },
   "repository": {
     "type": "git",
@@ -23,19 +26,16 @@
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
     "ganache-cli": "^6.0.3",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.4.0",
-    "gulp-sass": "^3.1.0",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
+    "nodemon": "^1.14.12",
     "style-loader": "^0.19.1",
     "truffle": "^4.0.5",
-    "webpack": "^3.10.0",
-    "webpack-stream": "^4.0.0"
+    "web3": "^0.20.4",
+    "webpack": "^3.10.0"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.3.0",
-    "web3": "^0.20.4"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "swig": "^1.4.2"
   }
 }
+
